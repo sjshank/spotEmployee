@@ -1,11 +1,17 @@
 
 const express = require('express'),
+      expressHbs = require('express3-handlebars'),
       path = require('path'),
       logger = require('morgan'),
       cookieParser = require('cookie-parser'),
       bodyParser = require('body-parser'),
       app = express();
 
+
+  // view engine setup
+  app.set('views', path.join(__dirname, '/views'));
+  app.set('view engine', 'htm');
+  app.use(logger('dev'));
 /*
 * Built-in middleware express.static to server static files such as images/css/js etc
 */
