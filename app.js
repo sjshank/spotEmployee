@@ -9,7 +9,7 @@ const express = require('express'),
 
 
   // view engine setup
-  app.set('views', path.join(__dirname, '/views'));
+  app.set('views', path.join(__dirname, 'views'));
   app.set('view engine', 'htm');
   app.use(logger('dev'));
 /*
@@ -24,7 +24,7 @@ const express = require('express'),
 //Show landing page
 app.get('/', function(req, res){
   res.sendFile(__dirname + '/client/views/index.htm');
-})
+});
 
 
 // catch 404 and forward to error handler

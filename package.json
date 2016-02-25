@@ -26,8 +26,11 @@
   "dependencies": {
     "angular": "^1.2.29",
     "angular-amd": "^0.2.1",
+    "angular-animate": "^1.5.0",
+    "angular-aria": "^1.5.0",
     "angular-cookies": "^1.2.29",
     "angular-material": "^1.0.5",
+    "angular-messages": "^1.5.0",
     "angular-route": "^1.2.29",
     "bindings": "^1.2.1",
     "body-parser": "^1.14.1",
@@ -44,10 +47,12 @@
     "grunt-contrib-uglify": "~0.4.0",
     "grunt-contrib-watch": "~0.6.1",
     "grunt-nodemon": "~0.3.0",
+    "install": "^0.5.0",
     "less": "^2.5.3",
     "morgan": "^1.6.1",
     "ng-resource": "^1.2.18",
     "node-gyp": "^3.2.1",
+    "npm": "^3.7.3",
     "requirejs": "^2.1.22"
   }
 }

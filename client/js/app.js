@@ -2,18 +2,24 @@ define(['angular',
         'angRoute',
         'angularAMD',
         'angResource',
-        'angCookies'],
+        'angAnimate',
+        'angAria',
+        'angMaterial',
+        'angMessages'],
         function(angular,
                  angRoute,
                  angularAMD,
                  angResource,
-                 angCookies) {
+                 angAnimate,
+                 angAria,
+                 angMaterial,
+                 angMessages) {
 
         var _self = this;
         'use strict';
 
         // Creating apllication module and defining dependencies
-        var app = angular.module("spotApp", ["ngRoute", "ngResource", "ngCookies"], function($httpProvider){});
+        var app = angular.module("spotApp", ["ngRoute", "ngResource", "ngMaterial", "ngMessages"], function($httpProvider){});
         
         // Defining routes
         app.config( function ($routeProvider) {
