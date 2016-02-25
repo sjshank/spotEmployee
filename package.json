@@ -2,8 +2,9 @@
   "name": "employee_crawler",
   "version": "1.0.0",
   "description": "Simple web application to keep a track of employees and see who is sitting where and doing what !",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,8 @@
     "body-parser": "^1.14.1",
     "bootstrap": "^3.3.6",
     "cookie-parser": "^1.4.0",
+    "connect": "^3.4.1",
+    "connect-mongo": "^1.1.0",
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "express3-handlebars": "*",
@@ -49,6 +52,7 @@
     "grunt-nodemon": "~0.3.0",
     "install": "^0.5.0",
     "less": "^2.5.3",
+    "mongoose": "^4.2.8",
     "morgan": "^1.6.1",
     "ng-resource": "^1.2.18",
     "node-gyp": "^3.2.1",

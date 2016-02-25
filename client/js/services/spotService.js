@@ -1,10 +1,14 @@
 define(['app'],
-		function(spotService){
+		function(spotApp){
 
 			var _self = this;
 			'use strict';
 
-			spotService.factory('spotService', ['$resource', function($resource){
-				return "";
+			spotApp.factory('spotService', ['$resource', function($resource){
+				return $resource('/api/load', {}, {
+				 doSignin: {
+				 			   method: 'POST'
+				 		  }
+				  });
 			}]);
 });

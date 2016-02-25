@@ -25,7 +25,7 @@ define(['angular',
         app.config( function ($routeProvider) {
                          $routeProvider
                          .when("/login", angularAMD.route({
-                                 templateUrl: 'views/login.htm', controller: 'loginCtrl', controllerUrl: 'controller/loginController'
+                                 templateUrl: 'views/login.htm', controller: 'signinCtrl', controllerUrl: 'controller/signinController'
                          }))
                          .when("/spot", angularAMD.route({
                                  templateUrl: 'views/spot.htm', controller: 'spotCtrl', controllerUrl: 'controller/spotController'
