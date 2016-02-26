@@ -36,9 +36,9 @@
     "bindings": "^1.2.1",
     "body-parser": "^1.14.1",
     "bootstrap": "^3.3.6",
-    "cookie-parser": "^1.4.0",
     "connect": "^3.4.1",
     "connect-mongo": "^1.1.0",
+    "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
     "express-session": "^1.12.1",
     "express3-handlebars": "*",
@@ -57,6 +57,7 @@
     "ng-resource": "^1.2.18",
     "node-gyp": "^3.2.1",
     "npm": "^3.7.3",
-    "requirejs": "^2.1.22"
+    "requirejs": "^2.1.22",
+    "socket.io": "^1.4.5"
   }
 }

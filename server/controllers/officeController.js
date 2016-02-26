@@ -9,7 +9,7 @@ exports.getEmployee = function(req, res) {
 	
 	if(typeof req.body != undefined || req.body !== ""){
 
-			OfficeModel.find().exec(function(err, result){
+			OfficeModel.find().sort('seatID').exec(function(err, result){
 				if(err){
 					console.log(err); 
 					res.json({errMsg : "Something went wrong in backend. We are working hard to resolve."});

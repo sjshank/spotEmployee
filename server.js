@@ -8,6 +8,8 @@ module.exports = function(app){
     app.set('port', port);
 
     var server = http.createServer(app);
+    var io = require("socket.io")(server);
     server.listen(port);
     console.log("server is listening on port 3000");
+    return io;
 };
