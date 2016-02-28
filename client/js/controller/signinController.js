@@ -1,18 +1,19 @@
 define(['app',
         'service/signinService',
-        'utils/appUtils'],
+        'utils/appUtils',
+        'controller/headerController'],
         function(spotApp,
-                 userService,
-                 appUtils) {
+                 signinService,
+                 appUtils,
+                 headerController) {
 
-            spotApp.controller('signinCtrl', ['$scope', '$rootScope', '$location', 'responseService',
-                                 function($scope, $rootScope, $location, responseService){
+            spotApp.controller('signinCtrl', ['$scope', '$rootScope', '$location', 'tableFactory',
+                                 function($scope, $rootScope, $location, tableFactory){
               
-               console.log('signin controller');
-               $scope.hasError = false;
-
+               $rootScope.showSearchBox = false;
+               tableFactory.clearTableObj();
                $scope.signin = function(){
-                $location.path('/spot');
+                  $location.path('/spot');
                };
 
             }]);

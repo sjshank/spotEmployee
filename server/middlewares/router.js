@@ -8,14 +8,15 @@ const router = require("./init"),
 	empController = require("../controllers/empController");
 
 
-router.route('/office')
-	.post(function(req, res){
-		officeController.getEmployee(req, res);
-	});
 
 router.route('/load')
 	.post(function(req, res){
-		empController.loadOfficeDetails(req, res);
+		officeController.loadOfficeDetails(req, res);
+	});
+
+router.route('/search')
+	.post(function(req, res){
+		empController.getEmployee(req, res);
 	});
 
 

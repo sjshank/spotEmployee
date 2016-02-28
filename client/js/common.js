@@ -13,6 +13,8 @@ require.config({
 		angAria : "angular-aria/angular-aria.min",
 		angMaterial : "angular-material/angular-material.min",
 		angMessages : "angular-messages/angular-messages.min",
+        uiBootstrap : "js/lib/ui-bootstrap-tpls",
+        ngSanitize : "angular-sanitize/angular-sanitize.min",
 		controller : "js/controller",
 		service  : "js/services",
 		app : "js/app",
@@ -45,6 +47,14 @@ require.config({
         "angMaterial" : {
         	deps: ["angular"],
             exports : "angMaterial"
+        },
+        "ngSanitize" : {
+            deps: ["angular"],
+            exports : "ngSanitize"
+        },
+        "uiBootstrap" : {
+            deps: ["angular"],
+            exports : "uiBootstrap" 
         },
 		"angRoute" :  ["angular"],
 		"angularAMD" : ["angular"]

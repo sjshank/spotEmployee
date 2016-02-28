@@ -1,14 +1,16 @@
       <form class="form-signin" name="signinForm" ng-submit="signin()">
         <h3 class="form-signin-heading">Please Sign In</h3>
+        <br>
+
         	<md-input-container class="empContainer md-block">
 		        <label style="font-size:16px;">Employee ID</label>
-		        <input required name="empId" ng-model="employeeID" >
+		        <input required name="empId" minLength = 4 ng-model="employeeID" >
 		        <div ng-messages="signinForm.empId.$invalid">
 		          <div ng-message="required">This is required.</div>
 		        </div>
       		</md-input-container>
 
-        <button type="submit" ng-disabled="signinForm.empId.$invalid" class="btn btn-lg btn-primary btn-block">Spot Employee</button>
+        <button type="submit" ng-disabled="signinForm.empId.$invalid" class="btn btn-lg btn-primary btn-block">Sign in</button>
       </form>
 
 

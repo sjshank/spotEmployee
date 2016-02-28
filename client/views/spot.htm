@@ -1,115 +1,26 @@
-<div class="container-fluid bg-3 text-center">    
+  <div class="row errorBox" ng-show="hasError">
+    <ng-include src="'views/errorTemplate.htm'" scope=""></ng-include>
+  </div>
+
+<div class="row">
+  <div class="col-sm-2" style="width:162px;">
+    <svg class="" height="50"  xmlns="http://www.w3.org/2000/svg" >
+            <circle id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
+            <h4>Occupied Seats</h4>
+    </svg>
+    
+  </div>
+  <div class="col-sm-2">
+    <svg class="" height="50"  xmlns="http://www.w3.org/2000/svg" >
+            <circle id="redcircle" cx="50" cy="50" r="20" fill="#808080" />
+            <h4>Vacant Seats</h4>
+    </svg>
+    
+</div>
+</div>
+
+<div class="container-fluid bg-3 text-center" style="margin-left: 60px;">    
   <div class="row">
-    <div class="col-sm-4" >
-      <svg  name="emp0" id="seat0" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp1" id="seat1" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 1</center>
-      </div>
-    <svg  name="emp2"   id="seat2" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp3"   id="seat3" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
-     <div class="col-sm-4" >
-      <svg name="emp4"   id="seat4" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp5"  id="seat5" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 2</center>
-      </div>
-    <svg  name="emp6"  id="seat6" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp7"  id="seat7" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
-     <div class="col-sm-4" >
-      <svg name="emp8"  id="seat8" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp9"  id="seat9" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 3</center>
-      </div>
-    <svg  name="emp10" id="seat10" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp11"  id="seat11" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
-
-     <div class="col-sm-4" >
-      <svg  name="emp12"  id="seat12" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp13"  id="seat13" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 4</center>
-      </div>
-    <svg  name="emp14" id="seat14" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp15" id="seat15" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
-
-     <div class="col-sm-4" >
-      <svg  name="emp16"  id="seat16" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp17"  id="seat17" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 5</center>
-      </div>
-    <svg name="emp18"  id="seat18" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg name="emp19" id="seat19" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
-
-     <div class="col-sm-4" >
-      <svg  name="emp20" id="seat20" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="50" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp21" id="seat21" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle  ng-mouseover="hoverIn($event)" id="redcircle" cx="50" cy="50" r="20" fill="#800000" />
-      </svg>
-      <div class="tblDiv">
-        <center>Table 6</center>
-      </div>
-    <svg  name="emp22" id="seat22" class="elm1" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#337ab7" />
-      </svg>
-      <svg  name="emp23" id="seat23" class="elm2" height="50" xmlns="http://www.w3.org/2000/svg">
-         <circle ng-mouseover="hoverIn($event)"  id="redcircle" cx="50" cy="0" r="20" fill="#800000" />
-      </svg>
-    </div>
-
+      <div ngtable-Div tables = "tableList" on-mouseover = "hoverIn(obj)"></div>
   </div>
 </div><br><br>

@@ -7,18 +7,19 @@
 
 		<title>Employee Crawler Application</title>
 		<link rel="stylesheet" type="text/css" href="bootstrap/dist/css/bootstrap.min.css" />
-		<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0-rc1/angular-material.min.css">
+		<link rel="stylesheet" href="angular-material/angular-material.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
 		<!-- Including requirejs module and commonjs to load js files dynamically based on requirement-->
 		<script type="text/javascript" src="js/lib/require.min.2.1.js"></script>
 		<script type="text/javascript" src="js/common.js"></script>
+		<script type="text/javascript" src="js/controller/headerController.js"></script>
 		
 
 		
 		
 	</head>
-<body class="container" style="height:auto">
+<body class="container" style="height:auto;width: 100%">
 	<ng-include src="'views/header.htm'" scope="" onload=""></ng-include>
 	<div ng-view ></div>
 </body>

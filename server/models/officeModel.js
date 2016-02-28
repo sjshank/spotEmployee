@@ -5,7 +5,7 @@ const db = require("../middlewares/db"),
 var officeModel = new Schema({
     seatID: {type: String, unique: true},
     isVacant: {type: Boolean, default: true},
-    Employees: [{
+    emp: {
             hasAllocated: {type: Boolean, default: false},
             isActive: {type: Boolean, default: false},
             empID : {type: String, unique: true},
@@ -13,7 +13,7 @@ var officeModel = new Schema({
             designation : {type: String, default: 'Bench Resource'},
             team : {type: String, default: "Bench Department"},
             project : {type: String, default: "Bench"}
-    }]
+    }
 });
 var office = db.model('OfficeModel', officeModel);
 

@@ -5,7 +5,9 @@ define(['angular',
         'angAnimate',
         'angAria',
         'angMaterial',
-        'angMessages'],
+        'angMessages',
+        'ngSanitize',
+        'uiBootstrap'],
         function(angular,
                  angRoute,
                  angularAMD,
@@ -13,30 +15,36 @@ define(['angular',
                  angAnimate,
                  angAria,
                  angMaterial,
-                 angMessages) {
+                 angMessages,
+                 ngSanitize,
+                 uiBootstrap) {
 
         var _self = this;
         'use strict';
 
         // Creating apllication module and defining dependencies
-        var app = angular.module("spotApp", ["ngRoute", "ngResource", "ngMaterial", "ngMessages"], function($httpProvider){});
+        var app = angular.module("spotApp", ["ngRoute", "ngResource", "ngMaterial", "ngMessages", "ui.bootstrap", "ngSanitize"], function($httpProvider){});
         
         // Defining routes
         app.config( function ($routeProvider) {
                          $routeProvider
-                         .when("/login", angularAMD.route({
+                         .when("/signin", angularAMD.route({
                                  templateUrl: 'views/login.htm', controller: 'signinCtrl', controllerUrl: 'controller/signinController'
                          }))
                          .when("/spot", angularAMD.route({
                                  templateUrl: 'views/spot.htm', controller: 'spotCtrl', controllerUrl: 'controller/spotController'
                          }))
-                         .otherwise({redirectTo: "/login"});
+                         .otherwise({redirectTo: "/signin"});
                          });
 
         app.constant('appConstants', {
                         SERVICE_ERROR : "Service is temporarily unavailable. Please try after sometime."
                 });
+        app.run([ '$rootScope', function($rootScope) {
+                $rootScope.showSearchBox = false;
+        }]);
 
+       
         //Bootstrapping application using AngularAMD
         return angularAMD.bootstrap(app);
 });

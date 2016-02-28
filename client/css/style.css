@@ -5,6 +5,11 @@ body {
     padding-bottom: 40px;
     padding-top: 40px;
     border: 1px solid grey;
+    width: 100% important;
+}
+.headerNav {
+  background-color: #337ab7 !important;
+  border-color: #337ab7 !important;
 }
 .floatLeft {
     float : left;
@@ -42,7 +47,7 @@ body {
     margin-left: 3px;
 }
 .captionPara {
-    margin-left: 3px;
+    margin-top: -10px;
     font-size: 14px;
 }
 .topCircle1 {
@@ -82,4 +87,36 @@ body {
 }
 .elm2 {
     max-width: 70px;
+}
+
+.md-button {
+    font-size: 16px !important;
+    font-weight: bold !important;
+}
+.headingCls {
+    margin-left: 20px;
+}
+.searchBox, .searchBox:hover {
+    background-color : #fff !important;
+    color : black !important;
+    height: 20px;
+    margin-top: 50px;
+}
+.md-dialog-is-showing {
+    max-height: inherit !important;
+    position: relative !important;
+    width : none !important;
+}
+.tableTxt {
+    margin-top: 65px;
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+.errDiv {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.pointerCursor {
+    cursor: pointer;
 }

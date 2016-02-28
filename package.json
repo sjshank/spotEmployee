@@ -33,6 +33,7 @@
     "angular-material": "^1.0.5",
     "angular-messages": "^1.5.0",
     "angular-route": "^1.2.29",
+    "angular-sanitize": "^1.5.0",
     "bindings": "^1.2.1",
     "body-parser": "^1.14.1",
     "bootstrap": "^3.3.6",
