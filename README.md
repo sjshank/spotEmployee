@@ -5,6 +5,9 @@ Note : This application is still under construction.
 
 Simple MEAN Stack web application to keep a track of employees and see who is sitting where and doing what !
 
+For SignIn Into App :
+
+ EmployeeID : 12345
 
 Programming Language :
 
@@ -44,4 +47,5 @@ Steps to follow for running app :
     6. Run 'node app.js' over root directory.
     
     Hit "localhost:3000" to see running application
+   
     
