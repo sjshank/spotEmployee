@@ -1,3 +1,4 @@
+
 <header ng-controller="headerCtrl">
 	<nav class="navbar navbar-default headerNav" role="navigation">
 		<div class="container-fluid">
@@ -11,7 +12,8 @@
 			</li>
 		</ul>
 		<form ng-show="showSearchBox">
-			<input type="text" ng-model="query" placeholder="Search" uib-typeahead="name for name in getEmployee($viewValue) | limitTo:4" typeahead-loading="loadingEmployees" typeahead-no-results="noResults" class="navbar-brand searchBox active floatRight" typeahead-on-select="onSelect($item, $model, $label)">
+			<input type="text" ng-model="query" placeholder="Search" uib-typeahead="name as seat.emp.name for seat in getEmployee($viewValue) | limitTo:4" typeahead-loading="loadingEmployees" typeahead-no-results="noResults" class="navbar-brand searchBox active floatRight" typeahead-on-select="onSelect($item, $model, $label)">
+
 		</form>
 		</div>
 	</nav>

@@ -10,18 +10,23 @@ require(['app',
               
 
               $scope.getEmployee = function(val){
+
                   return $http.post('/api/search', {
                           searchQuery : val
                         }).then(function(response){
-                          return response.data.map(function(item){
-                            return item.emp.name;
-                          });
+                          if(response.data.length > 0){
+                            return response.data.map(function(item){
+                              return seat = item;
+                            });
+                          }
                       });
                   };
 
                   $scope.onSelect = function($item, $model, $label) {
+                    $scope.query = $label;
+                    console.log($item);
                     try{
-                      $rootScope.$broadcast('employeeSelected', { empName: $model });
+                      $rootScope.$broadcast('employeeSelected', { seatObj: $item });
                     }catch(e){
                       console.log("Not able to select employee name");
                     }

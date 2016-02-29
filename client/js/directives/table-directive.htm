@@ -1,21 +1,21 @@
 <div class="col-md-4" ng-repeat="table in tables">
 		<svg name="{{table.obj[0].emp.name}}" id="{{table.obj[0].seatID}}"  class="elm1" height="50"
 		    xmlns="http://www.w3.org/2000/svg" >
-		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[0]})"  id="redcircle" cx="50" cy="50" r="20" fill="{{table.obj[0].isVacant ? '#800000' : '#808080'}}" />
+		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[0]})"  id="redcircle" cx="50" cy="50" r="20" fill="{{table.obj[0].emp.seatColor}}" />
 		</svg>
 		<svg name="{{table.obj[1].emp.name}}" id="{{table.obj[1].seatID}}" class="elm2" height="50"
 		    xmlns="http://www.w3.org/2000/svg">
-		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[1]})" id="redcircle" cx="50" cy="50" r="20" fill="{{table.obj[1].isVacant ? '#800000' : '#808080'}}" />
+		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[1]})" id="redcircle" cx="50" cy="50" r="20" fill="{{table.obj[1].emp.seatColor}}" />
 		    
 		    <div class="tblDiv"><center class="tableTxt">Table {{$index + 1}}</center></div>
 		    
 		<svg name="{{table.obj[2].emp.name}}" id="{{table.obj[2].seatID}}"  class="elm1" height="50"
 		    xmlns="http://www.w3.org/2000/svg">
-		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[2]})"  id="redcircle" cx="50" cy="0" r="20" fill="{{table.obj[2].isVacant ? '#800000' : '#808080'}}" />
+		    <circle class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[2]})"  id="redcircle" cx="50" cy="0" r="20" fill="{{table.obj[2].emp.seatColor}}" />
 		</svg>
 		<svg name="{{table.obj[3].emp.name}}" id="{{table.obj[3].seatID}}" class="elm2" height="50"
 		    xmlns="http://www.w3.org/2000/svg">
-		    <circle  class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[3]})" id="redcircle" cx="50" cy="0" r="20" fill="{{table.obj[3].isVacant ? '#800000' : '#808080'}}" />
+		    <circle  class="pointerCursor" ng-mouseover="onMouseover({obj:table.obj[3]})" id="redcircle" cx="50" cy="0" r="20" fill="{{table.obj[3].emp.seatColor}}" />
 		</svg>
 
 </div>

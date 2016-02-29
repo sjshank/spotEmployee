@@ -36,6 +36,7 @@ define(['app'],
 							                        'designation' : list[k]['emp']['designation'],
 							                        'team' : list[k]['emp']['team'],
 							                        'project' : list[k]['emp']['project'],
+							                        'seatColor' : list[k]['isVacant'] ? '#808080' : '#800000'
 							                    },
 							                    'isVacant' : list[k]['isVacant']
 											});	

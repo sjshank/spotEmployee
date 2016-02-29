@@ -64,8 +64,9 @@ define(['app',
                 };
 
                 $rootScope.$on('employeeSelected', function (event, args) {
-                 $scope.message = args.empName;
-                 console.log($scope.message);
+                    if(args.seatObj && args.seatObj['emp']){
+                      args.seatObj['emp']['seatColor'] = '#337ab7';
+                    }
                  });
             }]);
 
