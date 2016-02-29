@@ -5,6 +5,7 @@ define(['angular'],
   		var _self = this;
 		'use strict';
 
+		//Directive to render tables
 		 spotApp.directive("ngtableDiv", function() {
 		 	
 			    return  {

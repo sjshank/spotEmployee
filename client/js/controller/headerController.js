@@ -8,7 +8,7 @@ require(['app',
             spotApp.controller('headerCtrl', ['$scope', '$http', '$rootScope', '$location', 'responseService',
                                  function($scope, $http, $rootScope, $location, responseService){
               
-
+              //Retrieve list of employee based on user search
               $scope.getEmployee = function(val){
 
                   return $http.post('/api/search', {
@@ -22,9 +22,9 @@ require(['app',
                       });
                   };
 
+                  //On select of employee from auto-complete, broadcast event and paas current object
                   $scope.onSelect = function($item, $model, $label) {
                     $scope.query = $label;
-                    console.log($item);
                     try{
                       $rootScope.$broadcast('employeeSelected', { seatObj: $item });
                     }catch(e){

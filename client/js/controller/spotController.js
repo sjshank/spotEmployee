@@ -9,14 +9,17 @@ define(['app',
                  appDirectives,
                  headerController) {
 
+          //Calling directive
            appDirectives(spotApp);
 
+           //Spot controller for spot screen
             spotApp.controller('spotCtrl', ['$scope', '$rootScope', '$location', 'spotService',
                                  'responseService', '$mdDialog', 'tableFactory', 'loadService', 'appConstants',
                                  function($scope, $rootScope, $location, spotService, responseService,
                                      $mdDialog, tableFactory, loadService, appConstants){
 
                 $rootScope.showSearchBox = true;
+                //OnLoad call to REST API service to load dummy data
                 try{
                     loadService.load({}).$promise.then(function(response){
                         if(responseService.checkResponse(response, $scope, true)){
@@ -39,6 +42,8 @@ define(['app',
 
                 //var socket = io();
                 $scope.query = "";
+
+                //Logic for displaying popup with employee details
                 $scope.hoverIn = function(data){
                   try{
                           if(!data.isVacant){
@@ -62,6 +67,7 @@ define(['app',
                     }
                 };
 
+                //Capture broadcast event
                 $rootScope.$on('employeeSelected', function (event, args) {
                     if(args.seatObj && args.seatObj['emp']){
                       $scope.tableList.forEach(function(val, index, t){

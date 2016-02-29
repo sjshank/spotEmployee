@@ -7,6 +7,7 @@ define(['app',
                  appUtils,
                  headerController) {
 
+            //Sigin controller for authorizing user
             spotApp.controller('signinCtrl', ['$scope', '$rootScope', '$location', 'tableFactory',
                                  function($scope, $rootScope, $location, tableFactory){
               

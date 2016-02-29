@@ -4,6 +4,7 @@
 			var _self = this;
 			'use strict';
 
+			//Service to check response of REST call
 			spotApp.service('responseService', ['appConstants',
 						function(appConstants){
 

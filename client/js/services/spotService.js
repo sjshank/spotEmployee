@@ -4,6 +4,7 @@ define(['app'],
 			var _self = this;
 			'use strict';
 
+			//RESTful API call to search employee
 			spotApp.service('spotService', ['$resource', function($resource){
 				return $resource('/api/search', {}, {
 				 search: {
@@ -12,6 +13,7 @@ define(['app'],
 				  });
 			}]);
 
+			//RESTful API call to load dummy data
 			spotApp.service('loadService', ['$resource', function($resource){
 				return $resource('/api/load', {}, {
 				 load: {
@@ -20,6 +22,7 @@ define(['app'],
 				  });
 			}]);
 
+			//Factory class to format data before rendering table layout on screen
 			spotApp.factory('tableFactory', ['appConstants', function(appConstants){
 				var tableFactory = [];
 					tableFactory.setTableObj = function(list){

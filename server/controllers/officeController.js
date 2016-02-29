@@ -86,7 +86,6 @@ OfficeModel.find().exec(function(err, result){
 
 
 function loadData(s, n, e, isVacant, hasAllocated, isActive){
-	console.log(e);
 
 	OfficeModel.update(
 						{ 'seatID' : s},
