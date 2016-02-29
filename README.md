@@ -1,5 +1,3 @@
-Note : This application is still under construction.
-
 
 # Employee Crawler
 
