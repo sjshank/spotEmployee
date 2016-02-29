@@ -38,7 +38,10 @@ define(['angular',
                          });
 
         app.constant('appConstants', {
-                        SERVICE_ERROR : "Service is temporarily unavailable. Please try after sometime."
+                        SERVICE_ERROR : "Service is temporarily unavailable. Please try after sometime.",
+                        BLUE_INDICATOR : "#337ab7",
+                        MAROON_INDICATOR : "#800000",
+                        GREY_INDICATOR : "#808080",
                 });
         app.run([ '$rootScope', function($rootScope) {
                 $rootScope.showSearchBox = false;

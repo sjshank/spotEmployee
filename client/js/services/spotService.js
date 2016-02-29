@@ -20,7 +20,7 @@ define(['app'],
 				  });
 			}]);
 
-			spotApp.factory('tableFactory', function(){
+			spotApp.factory('tableFactory', ['appConstants', function(appConstants){
 				var tableFactory = [];
 					tableFactory.setTableObj = function(list){
 						try{
@@ -30,13 +30,14 @@ define(['app'],
 									for (var j = 0; j < 4; j++) {
 											obj.push({
 												'seatID' : list[k]['seatID'],
+												'templateUrl' : 'popupOverTemplate.html',
 							                    'emp' : {
 							                        'empID' : list[k]['emp']['empID'],
 							                        'name' : list[k]['emp']['name'],
 							                        'designation' : list[k]['emp']['designation'],
 							                        'team' : list[k]['emp']['team'],
 							                        'project' : list[k]['emp']['project'],
-							                        'seatColor' : list[k]['isVacant'] ? '#808080' : '#800000'
+							                        'seatColor' : list[k]['isVacant'] ? appConstants.GREY_INDICATOR : appConstants.MAROON_INDICATOR
 							                    },
 							                    'isVacant' : list[k]['isVacant']
 											});	
@@ -58,6 +59,6 @@ define(['app'],
 					};
 
 					return tableFactory;
-				});
+				}]);
 			
 });

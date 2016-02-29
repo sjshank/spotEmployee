@@ -8,7 +8,7 @@ define(['angular'],
 		 spotApp.directive("ngtableDiv", function() {
 		 	
 			    return  {
-			    	templateUrl : './js/directives/table-directive.htm',
+			    	templateUrl : '../views/table-directive.htm',
 			    	scope : {
 			    		tables : "=",
 			    		onMouseover : "&"

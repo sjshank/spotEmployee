@@ -12,16 +12,15 @@ define(['app',
            appDirectives(spotApp);
 
             spotApp.controller('spotCtrl', ['$scope', '$rootScope', '$location', 'spotService',
-                                 'responseService', '$mdDialog', 'tableFactory', 'loadService',
+                                 'responseService', '$mdDialog', 'tableFactory', 'loadService', 'appConstants',
                                  function($scope, $rootScope, $location, spotService, responseService,
-                                     $mdDialog, tableFactory, loadService){
+                                     $mdDialog, tableFactory, loadService, appConstants){
 
-                console.log('spot controller');
                 $rootScope.showSearchBox = true;
                 try{
                     loadService.load({}).$promise.then(function(response){
                         if(responseService.checkResponse(response, $scope, true)){
-                          console.log(response.data);
+                          
                           if(response.data){
                             $scope.hasError = false;
                             tableFactory.setTableObj(response.data);
@@ -42,7 +41,7 @@ define(['app',
                 $scope.query = "";
                 $scope.hoverIn = function(data){
                   try{
-                          if(data.isVacant){
+                          if(!data.isVacant){
                               $mdDialog.show(
                                 $mdDialog.alert()
                                   .clickOutsideToClose(true)
@@ -65,7 +64,18 @@ define(['app',
 
                 $rootScope.$on('employeeSelected', function (event, args) {
                     if(args.seatObj && args.seatObj['emp']){
-                      args.seatObj['emp']['seatColor'] = '#337ab7';
+                      $scope.tableList.forEach(function(val, index, t){
+                          val['obj'].forEach(function(v, i, o){
+                            if(!v['isVacant']){ 
+                                if(v['emp']['seatColor'] === appConstants.BLUE_INDICATOR){
+                                    v['emp']['seatColor'] = appConstants.MAROON_INDICATOR;
+                                }
+                                if(v['seatID'] === args.seatObj['seatID']){
+                                    v['emp']['seatColor'] = appConstants.BLUE_INDICATOR;
+                                }
+                            }
+                          });
+                      });
                     }
                  });
             }]);
